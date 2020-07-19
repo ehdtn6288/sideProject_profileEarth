@@ -1,0 +1,13 @@
+extends layouts/main
+
+block content
+    .profile-Detail__container
+        .profileDetail__img
+            img(src=`/${profile.fileUrl}`, alt="Error", width="600px", height="400px")
+        .profileDetail__info
+            a(href=routes.editProfile(profile.id))
+                button Edit Profile
+            h3= profile.title
+            h4= profile.name
+            h5= profile.description
+            h4= profile.views

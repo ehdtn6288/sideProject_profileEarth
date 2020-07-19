@@ -1,0 +1,11 @@
+extends layouts/main
+
+block content
+    .form-container 
+        form(action=routes.upload, method = "post", enctype = "multipart/form-data")
+            label(for="file") Profile Upload
+            input(type="file", id = "file", name="profileUpload" )
+            input(type="text", placeholder = "Title",name="title")
+            input(type="text", placeholder = "Name", name="name" )
+            textarea(placeholder="Description", name="description")
+            input(type="submit", value="Upload")

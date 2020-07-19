@@ -1,0 +1,20 @@
+extends layouts/main
+include mixins/profileBlock
+
+block content
+    .search__header
+        h3 Searching for : #{searchingBy}
+
+    .search__profile
+        if profiles.length == 0
+            p No such Profiles
+            
+        each item in profiles
+            +profileBlock({
+                fileUrl : item.fileUrl,
+                title : item.title,
+                name : item.name,
+                description : item.description,
+                views : item.views,
+                id : item.id
+            })

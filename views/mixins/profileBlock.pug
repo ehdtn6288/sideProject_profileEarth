@@ -1,0 +1,10 @@
+mixin profileBlock(profile={})
+    .profileBlock
+        a(href=routes.profileDetail(profile.id))
+            .profileBlock__img 
+                img(src=profile.fileUrl, alt="Error", width="400px", height=" 250px")
+            .profileBlock__info
+                h2=profile.title
+                h3=profile.name
+                h5=profile.description
+                h7=profile.views
